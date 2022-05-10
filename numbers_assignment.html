@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Numbers In JavaScript</title>
+
+    <style>
+        span {
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calorie Calculator</h1>
+
+    
+    <input type="number" name="" id="protien" placeholder="Enter Protiens">
+    <input type="number" name="" id="carbs" placeholder="Enter Carbohydrates">
+    <input type="number" name="" id="fat" placeholder="Enter Fats">
+
+    <button id="calculate" onclick="calculate_calories()">Calculate Total Calories</button>
+
+    <div id="result"></div>
+
+    <script>
+
+    function calculate_calories() {
+        const protien = document.getElementById('protien').value*4
+        const carbs = document.getElementById('carbs').value*4
+        const fat = document.getElementById('fat').value*9
+
+        const total = fat+carbs+protien 
+
+        console.log(protien)
+        console.log(carbs)
+        console.log(fat)
+        console.log(total)
+
+        const result = document.getElementById('result')
+
+        result.innerHTML += `<p>Protien: ${protien}</p>`
+        result.innerHTML += `<p>Carbs: ${carbs}</p>`
+        result.innerHTML += `<p>Fat: ${fat}</p>`
+        result.innerHTML += `<p>Total: ${total}</p>`
+    }
+
+
+    </script>
+
+</body>
+</html>

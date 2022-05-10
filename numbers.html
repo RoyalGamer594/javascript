@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Numbers In JavaScript</title>
+
+    <style>
+        span {
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h1>Numbers In JavaScript</h1>
+
+    <div id="arithmetic_operations"></div>
+
+    <script>
+        // example of integers
+        let age = 10;
+        let yearOfBirth = 2015;
+
+        // example of floats
+        let height = 5.11
+
+        // arithmetic Operations
+
+        let num1 = 6
+        let num2 = 3
+
+        // let num1 = parseInt(prompt('Enter num1'))
+        // let num2 = parseInt(prompt('Enter num2'))
+
+        let sum = num1+num2
+        let difference = num1-num2
+        let product = num1*num2
+        let quotient = num1/num2
+        let remainder = num1%num2
+        let exponent = num1**num2
+
+        const arithmetic_operations = document.getElementById('arithmetic_operations')
+
+        arithmetic_operations.innerHTML += `<p><b>num1:</b> ${num1}</p>`
+        arithmetic_operations.innerHTML += `<p><b>num2:</b> ${num2}</p>`
+
+        arithmetic_operations.innerHTML += `<h2>Arithmetic Operations</h2>`
+        arithmetic_operations.innerHTML += `<p><b>sum:</b> ${sum}</p>`
+        arithmetic_operations.innerHTML += `<p><b>difference:</b> ${difference}</p>`
+        arithmetic_operations.innerHTML += `<p><b>product:</b> ${product}</p>`
+        arithmetic_operations.innerHTML += `<p><b>quotient:</b> ${quotient}</p>`
+        arithmetic_operations.innerHTML += `<p><b>remainder:</b> ${remainder}</p>`
+        arithmetic_operations.innerHTML += `<p><b>exponent:</b> ${exponent}</p>`
+        
+        // Math functions by JavaScript
+        // parseInt() - converts a string into an integer value (if the string is a number "1"-> 1)
+        
+        yearOfBirth = "2010"
+        arithmetic_operations.innerHTML += `<h2>Math functions in JavaScript</h2>`
+        arithmetic_operations.innerHTML += `<p>Age in 2022 is ${2022-parseInt(yearOfBirth)}</p>`
+        
+        // parseFloat() = converts a string into a float value (float means decimal numbers "16.22" -> 16.22)
+        
+        let burj_khalifa_height = parseFloat("828")
+        let merdeka_height = "678.9"
+
+        // Math.round() - rounds a number to the nearest possible integer value
+        let building_height_diff = burj_khalifa_height-parseFloat(merdeka_height)
+        building_height_diff = Math.round(building_height_diff)
+
+        arithmetic_operations.innerHTML += `<p>Height difference between <span>burj khalifa</span> an <span>merdeka</span> is ${building_height_diff}</p>`
+        
+        // Math.sqrt() - returns the square troot of a number
+        
+        let num3 = 25
+        
+        arithmetic_operations.innerHTML += `<p>The square root of ${num3} is ${Math.sqrt(num3)}</p>`
+        
+        // Math.random() - generate random numbers
+        
+        let random_num = Math.round(Math.random() * 15)
+        arithmetic_operations.innerHTML += `<p>The random number generated is ${random_num}</p>`
+        
+
+
+
+    </script>
+</body>
+</html>

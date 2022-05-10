@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Day Project</title>
+
+
+<style>
+    * {
+        font-family: 'Updock', cursive;
+    }
+
+    body {
+        margin: 0;
+        padding: 5%;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVgRjKWGwOQY5rAtADbd9Lqrf3EMAB_2gJnK-tzCDNWmp8gfAtzmsQj9s-yrEZ6isyVQ&usqp=CAU) no-repeat center center/cover;
+        backdrop-filter: blur(3px);
+        background-attachment: fixed;
+    }
+
+    .main-heading {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 3rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+        
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .card {
+        width: 25%;
+        box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .card-img img {
+        width: 100%;
+    }
+
+    .card-desc {
+        padding: 5%;
+    }
+
+    .card-desc h1 {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        text-transform: uppercase;
+    }
+
+    footer {
+        padding: 5%;
+        text-align: center;
+    }
+
+    footer a {
+        background-color: white;
+        padding: 1%;
+        border-radius: 20px;
+       
+        color: black;
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            width: 45%;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .main-heading {
+            font-size: 2rem;
+        }
+        .card {
+            width: 100%;
+            margin: 2.5%;
+        }
+
+        footer a {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <h1 class="main-heading">Shakespeare's Best Acts</h1>
+    <div class="cards">
+        <div class="card">
+            <div class="card-img">
+                <img src="https://i.pinimg.com/550x/01/e8/a6/01e8a662828e27f7927381a1cfd0968c.jpg" alt="">
+            </div>
+            <div class="card-desc">
+                <h1>Romeo and Juliet</h1>
+                <p>An age-old vendetta between two powerful families erupts into bloodshed. A group of masked Montagues risk further conflict by gatecrashing a Capulet party. A young lovesick Romeo Montague falls instantly in love with Juliet Capulet, who is due to marry her father’s choice, the County Paris. With the help of Juliet’s nurse, the women arrange for the couple to marry the next day, but Romeo’s attempt to halt a street fight leads to the death of Juliet’s own cousin, Tybalt, for which Romeo is banished. In a desperate attempt to be reunited with Romeo, Juliet follows the Friar’s plot and fakes her own death. The message fails to reach Romeo, and believing Juliet dead, he takes his life in her tomb. Juliet wakes to find Romeo’s corpse beside her and kills herself. The grieving family agree to end their feud.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://www.thoughtco.com/thmb/y0G9AcKNdO-LN313ZkAvDGCNMRE=/1361x1361/smart/filters:no_upscale()/19thCenturyEngravingMerchantofVeniceAndrewHowe-56abdbf05f9b58b7d009fff2.jpg" alt="">
+            </div>
+            <div class="card-desc">
+                <h1>Merchant of Venice</h1>
+                <p>Antonio, an antisemitic merchant, takes a loan from the Jew Shylock to help his friend to court Portia. Antonio can't repay the loan, and without mercy, Shylock demands a pound of his flesh. The heiress Portia, now the wife of Antonio's friend, dresses as a lawyer and saves Antonio.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="https://sites.dartmouth.edu/jacko/files/2019/11/julius-caesar.jpg" alt="Hyenas">
+            </div>
+            <div class="card-desc">
+                <h1>Julius Caesar</h1>
+                <p>Jealous conspirators convince Caesar's friend Brutus to join their assassination plot against Caesar. To stop Caesar from gaining too much power, Brutus and the conspirators kill him on the Ides of March. Mark Antony drives the conspirators out of Rome and fights them in a battle. Brutus and his friend Cassius lose and kill themselves, leaving Antony to rule in Rome.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+            font-size: 4rem;
+        }
+
+        span {
+            color: orange;
+            transition: all 4s ease;
+        }
+
+        span.animate {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">JavaScript</h1>
+    <script>
+        text = document.getElementById("title");
+        extract = text.textContent;
+
+        var newtext = extract.split("");
+
+        text.textContent = "";
+
+        for (t of newtext) {
+            text.innerHTML += "<span>" + t + "</span>"
+        }
+
+    let char_index = 0
+
+    function span_animation() {
+
+        const all_span = document.querySelectorAll('span')
+
+        if (char_index < all_span.length) {
+           
+            let current_span = all_span[char_index]
+
+            current_span.classList.add('animate')
+
+            char_index++
+        }
+
+    }
+
+
+    setInterval(span_animation, 50)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .box {
+            margin-top: 10px;
+            width: 50%;
+            height: 200px;
+            border: 1px solid;
+            
+        }
+    </style>
+
+    <title>HTML Events Assignment 2</title>
+</head>
+
+<body id="body">
+
+    <h3>Pick a Color to change the page background</h3>
+
+    <input type="color" id="color1" onchange="setBgColor()"> Color One
+    <input type="color" id="color2" onchange="setBgColor()"> Color Two
+
+    <div id="box" class="box"></div>
+
+    <script>
+        // NOTE: Always remember to create varibales to access HTML elements
+        // HTML elements can only be accessed by using the "document" keyword. eg: document.getElementById
+
+        function setBgColor() {
+
+            const color1 = document.getElementById('color1')
+            const color2 = document.getElementById('color2') 
+            const box = document.getElementById('box')
+
+            // if the HTML element you are access is an input tag (in this case color1 and color2), you can access the value prop
+    
+            console.log(color1.value)
+            console.log(color2.value)
+            console.log(box)
+
+            // styling the box HTML element to change the background linear gradient.
+
+            box.style.background = `linear-gradient(${color1.value},${color2.value})`;
+        }
+    </script>
+
+
+</body>
+
+</html>

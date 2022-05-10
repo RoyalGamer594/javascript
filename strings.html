@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Strings</title>
+
+    <style>
+        #tags {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tag {
+            border: 1px solid rgb(44, 44, 202);
+            background-color: rgb(59, 158, 224);
+            color: rgb(0, 48, 94);
+            padding: 7.5px 5px;
+            margin: 7.5px 5px;
+            font-weight: bolder;
+        }
+
+        span {
+            color: black;
+            transition: all 4s ease;
+            transform: translateY(20px);
+            display: inline-block;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        span.animate {
+            color: red;
+            transform: translateY(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Strings</h1>
+
+    <div id="tags">
+    </div>
+
+    <h1 id="title">Penrose Learning</h1>
+
+    <script>
+        //            01234  
+        const name = "David"
+
+        console.log(name)
+
+        // string indexes
+
+        console.log(name[0])
+        console.log(name[1])
+        console.log(name[2])
+        console.log(name[3])
+        console.log(name[4])
+
+        // METHODS AND PROPERTIES
+
+        // length - find the length of the string i.e. how many characters are there in a string
+
+        console.log(name.length)
+
+        // trim() - removes spaces before and after the string
+
+        const address = "       Dubai, UAE    ".trim()
+
+        console.log(`${name} lives in ${address}.`)
+
+        // split() - it splits the string into an array (list)
+
+        const fullname = "David Letterman"
+
+        let split_fullname = fullname.split(" ")
+
+        console.log(split_fullname)
+
+        const tags = "HTML, CSS, JavaScript, Flask, Python, Web Design"
+
+        const user_tags = tags.split(",")
+
+        console.log(user_tags)
+
+        const dom_tags = document.getElementById("tags")
+
+        for (tag of user_tags) {
+            tag = tag.trim()
+
+            dom_tags.innerHTML += `<p class="tag">${tag}</p>`
+        }
+
+        // toLowerCase() - changes all characters to lowercase
+        const country = "UNITED ARAB EMIRATES"
+
+        console.log(country.toLowerCase())
+
+        // toUpperCase() - changes all the characters in a string to uppercase
+
+        const city = "dubai, uae"
+
+        console.log(city.toUpperCase())
+
+
+
+        // sample 3
+
+        const title = document.getElementById("title")
+
+        const extract = title.textContent
+
+        console.log("extract:", extract)
+
+        title.textContent = ""
+
+        // let username = "pranav.p@penrose.com"
+
+        // for(letter of username) {
+        //     console.log(letter)
+        // }
+
+        for (letter of extract) {
+            title.innerHTML += `<span>${letter}</span>`
+        }
+
+        let index_num = 0
+
+
+        // console.log(all_spans)
+
+
+        let timer = setInterval(change_color, 50)
+
+        function change_color() {
+            if (index_num < extract.length) {
+                const all_spans = document.querySelectorAll('span')[index_num]
+                all_spans.classList.add('animate')
+                index_num++
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

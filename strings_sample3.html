@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Strings Sample 3</title>
+
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        span {
+            color: white;
+            transition: all 4s ease;
+            transform: translateY(20px);
+            display: inline-block;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        span.animate {
+            color: blue;
+            transform: translateY(0px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Strings Sample 3</h1>
+
+    <h2 id="text">My name is Pranav P</h2>
+
+    <script>
+        const text = document.getElementById('text')
+
+        // taking the content in the h2 tag and saving in the user_text variable
+        let user_text = text.textContent
+
+        // removing content from the h2 tag after saving content in the user_text variable
+        text.textContent = ""
+
+        console.log(user_text)
+
+        // we used a for loop to access all letter in the user_text variable
+        // for each letter, we added a span tag
+        // we used the text variable to add the letter with span tag in the h2 HTMLElement
+        for (letter of user_text) {
+            text.innerHTML += "<span>" + letter + "</span>"
+        }
+
+        let char_index = 0
+
+
+
+        function span_animation() {
+
+            // we are taking all the spans in the HTML document and saving it in the all_spans variable
+            const all_spans = document.querySelectorAll('span')
+
+            if (char_index < all_spans.length) {
+
+                // we are accessing a span tag using the index number from the all_spans list of span tags
+                let current_span = all_spans[char_index]
+
+                // adding animate class to selected current_span -> span tag
+                current_span.classList.add('animate')
+
+                // we move on to the next span tag
+                char_index++
+            }
+
+        }
+
+        // call the span_animation function after every 50 milliseconds
+        setInterval(span_animation, 50)
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>If Statements</title>
+    
+  </head>
+  <body id="body">
+    
+    <h3>Weekend / Weekday</h3>
+  
+      <label>Enter the Day of the Week: </label>
+      <input type="text" id="givenDay" onchange="dayCheck()">
+
+    <p id="day"></p>
+  
+    <script>
+      
+      function dayCheck()
+      {
+      
+        var day = document.getElementById("day");
+            
+        var givenDay = document.getElementById("givenDay").value;
+        givenDay = givenDay.toLowerCase();
+            
+        if (givenDay === "saturday" || givenDay === "sunday")
+        {
+            day.innerHTML = "Weekend";
+        }
+        else if (givenDay === "friday" || givenDay === "monday" || givenDay === "tuesday"  || givenDay === "wednesday"  || givenDay === "thursday")
+        {
+            day.innerHTML = "Weekday";
+        }
+        else
+        {
+             day.innerHTML = "Invalid Day";
+        }
+        
+      }
+      
+  
+    </script>
+    
+  </body>
+</html>

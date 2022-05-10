@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events Assignment 1</title>
+
+
+    <style>
+        .selected_skin {
+            background-color: lightgreen;
+            padding: 10px;
+            border: 1px solid;
+            width: 100px;
+        }
+
+        body {
+            padding: 5%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <h2>Selected Skin for your Game</h2>
+        <h3 id="selected_skin" class="selected_skin"></h3>
+
+        <h4>Click a Skin to Select it</h4>
+        <ul>
+            <li id="guff">Guff</li>
+            <li id="rippley">Rippley</li>
+            <li id="blaze">Blaze</li>
+            <li id="fishstick">Fishstick</li>
+        </ul>
+
+        <script>
+            const selected_skin = document.getElementById('selected_skin')
+
+            document.getElementById('guff').addEventListener("click", function () {
+                selected_skin.style.backgroundColor = 'pink';
+            })
+
+            document.getElementById('rippley').addEventListener("click", function () {
+                selected_skin.style.backgroundColor = 'cyan'
+            })
+
+            document.getElementById('blaze').addEventListener("click", function () {
+                selected_skin.style.backgroundColor = 'Red'
+            })
+
+            document.getElementById('fishstick').addEventListener("click", function () {
+                selected_skin.style.backgroundColor = 'Yellow'
+            })
+        </script>
+
+    </body>
+
+</html>

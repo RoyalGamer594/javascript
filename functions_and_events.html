@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Functions And Events</title>
+
+    <style>
+        img {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funtions And Events</h1>
+
+    <h2 id="article_heading" onclick="article_heading_info('jelly fish')">Jelly Fish</h2>
+
+    <img src="https://media.istockphoto.com/photos/illustration-background-of-jellyfish-jellyfish-swims-in-the-ocean-sea-picture-id1033700106?k=20&m=1033700106&s=612x612&w=0&h=8pIGEPZP3eL4A37tSq1Qb5-DnoCrppeBh5uaeWzWla4=" alt="">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quisquam amet? Similique deleniti, consequatur, cum quas veniam dolorum sapiente animi et voluptatum, itaque sit mollitia alias optio voluptas qui deserunt.</p>
+    
+
+    <h2 id="article_heading" onclick="article_heading_info('shark')">Shark</h2>
+
+    <img src="https://www.thedubaiaquarium.com/wp-content/uploads/2020/01/shark-dives-inner-page-2.jpg" alt="">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quisquam amet? Similique deleniti, consequatur, cum quas veniam dolorum sapiente animi et voluptatum, itaque sit mollitia alias optio voluptas qui deserunt.</p>
+    
+    
+    <h2 id="article_heading" onclick="article_heading_info('coral fish')">Coral Fish</h2>
+
+    <img src="https://images.unsplash.com/photo-1595503240812-7286dafaddc1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29yYWwlMjByZWVmJTIwZmlzaHxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quisquam amet? Similique deleniti, consequatur, cum quas veniam dolorum sapiente animi et voluptatum, itaque sit mollitia alias optio voluptas qui deserunt.</p>
+
+    <script>
+        const article_heading = document.getElementById('article_heading')
+
+        function article_heading_info(aqua_animal) {
+            alert(`You are reading the ${aqua_animal} article.`)
+        }
+    </script>
+</body>
+</html>

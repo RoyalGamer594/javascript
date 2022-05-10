@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>HTML Events</title>
+
+    <style>
+        img {
+            width: 10%;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Events</h1>
+
+    <p id="task">what is the simpson doing? Click on it!</p>
+    <img src="http://www.mandysam.com/img/random.jpg" id="simpsons">
+
+    <script>
+        const simpsons = document.getElementById('simpsons')
+        const task = document.getElementById('task')
+
+        // addEventListener 
+
+        simpsons.addEventListener("click", function () {
+            simpsons.style.width = "100%"
+            task.textContent = `The simpson is spying on you`
+        })
+    </script>
+
+</body>
+</html>

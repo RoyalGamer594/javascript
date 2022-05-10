@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="base_style.css">
+    <title>JavaScript Refresher</title>
+
+    <style>
+        img {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="greeting">hey student! welcome to js</h1>
+
+    <div id="batman"></div>
+    
+    <button onclick="changeToDarkTheme()">Dark Theme</button>
+
+    <button onclick="changeToLightTheme()">Light Theme</button>
+
+    <h1>JOIN THE DC UNIVERSE</h1>
+
+    <form action="#" id="join_dc">
+        <input type="text" name="user_name" id="user_name" placeholder="Enter Your name:">
+        <input type="email" name="email" id="email" placeholder="Enter Your email:">
+
+        <input type="submit" value="REGISTER">
+    </form>
+
+    <script>
+        // variables
+
+        // before ES6
+        var name = "Pranav"
+        
+        // after ES6
+
+        // const - information (data) cannot be changed
+        const dateOfBirth = "6th March 2009"
+
+        // let - information (data) can be changed
+        let address = "Dubai, UAE"
+
+        console.log("NAME:",name)
+        
+        // trying to change a const var.
+        // dateOfBirth = "7th June 2008"
+
+        // trying to change a let var.
+        address = "Sharjah, UAE"
+
+        console.log("DATE OF BIRTH:",dateOfBirth)
+        console.log("ADDRESS:",address)
+
+        console.log(name, "lives in", address, ".", name, "was born on", dateOfBirth)
+
+        console.log(`${name} lives in ${address}. ${name} was born on ${dateOfBirth}`)
+
+        // functions
+
+        // alert() - allows the user to create a browser default pop-up
+        // alert(`${name} lives in ${address}. ${name} was born on ${dateOfBirth}`)
+
+        // prompt() -allows the user to add information in a variable using a pop-up box
+        // fav_color = prompt("Enter your favorite color")
+
+        // alert(`${name} likes ${fav_color}`)
+
+        // DOM Manipulation
+
+        const greeting = document.getElementById('greeting')
+
+        // console.log(greeting)
+
+        // textContent get the content in the HTML element
+        console.log(greeting.textContent)
+
+        // innerHTML - update/ add HTML content in the HTMLElement
+        const batman = document.getElementById('batman')
+
+        let batman_imgs = [
+            'https://images3.alphacoders.com/118/thumb-1920-1185634.jpg',
+            'https://wallpapercave.com/wp/Gn6c2Wp.jpg'
+        ]
+
+        let selected_img = batman_imgs[Math.floor(Math.random() * batman_imgs.length )]
+
+        batman.innerHTML = `<img src='${selected_img}'>`
+        batman.innerHTML += "<h1> I am vengence </h1>"
+        batman.innerHTML += "<h2> I am also bruce wayne </h2>"
+
+        batman.innerHTML += `
+        <img src = '' />
+        <h1> I am robin </h1>
+        <h2> I am batman's son </h2>
+        `
+
+        function changeToDarkTheme() {
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
+        }
+
+        function changeToLightTheme() { 
+            document.body.style.backgroundColor = "white"
+            document.body.style.color = "black"
+        }
+
+        // EVent Listeners
+
+        const join_dc = document.getElementById('join_dc')
+
+        // console.log(join_dc)
+
+        join_dc.addEventListener("submit", function(e) {
+            e.preventDefault()
+
+            const user_name = document.getElementById('user_name').value
+            const email = document.getElementById('email').value
+
+            alert(`${user_name} registered successfully \nRegistered Email: ${email}`)
+        })
+
+    </script>
+</body>
+</html>

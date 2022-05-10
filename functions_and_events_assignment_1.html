@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions and Events Assignment 1</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .buttons img {
+            width: 250px;
+            height: 150px;
+            margin: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Functions and Events Assignment 1</h1>
+
+    <img src="http://www.mandysam.com/img/random.jpg" id="simpsons">
+
+    <div class="buttons">
+
+        
+        <img src="https://thumbs.dreamstime.com/b/show-pink-word-text-logo-icon-design-typography-suitable-card-147085373.jpg" onclick="change_visibility('visible')">
+        
+        <img src="https://thumbs.dreamstime.com/b/hide-concept-word-blackboard-background-hide-196339195.jpg" onclick="change_visibility('hidden')">
+    </div>
+
+</body>
+
+<script>
+    const simpsons = document.getElementById('simpsons')
+
+    function change_visibility(visibility) {
+        simpsons.style.visibility = `${visibility}`
+    }
+</script>
+
+</html>

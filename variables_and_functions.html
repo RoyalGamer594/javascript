@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_style.css">
+    <title>Variables And Functions</title>
+</head>
+
+<body>
+    <h1>Variables And Functions</h1>
+
+    <script>
+        // variables - storage of information
+
+        var name = "David"
+        var age = 12
+
+        console.log(name, "is", age, "years old.")
+
+        // different keywords to initialize a variables
+
+        // below is an illustartion for issues that may occur on changing variable inforamtion.
+
+        name = `Mr. ${name}`
+        console.log("email sent to", name)
+
+        // DATA STORAGE
+
+        var data_storage = name
+        console.log(data_storage)
+
+        // const - it is used to create a variable that does not change information. It is mostly used when we take info. from the user and save it in a var.
+
+        const fullname = "David Letterman"
+
+        // fullname = "Dwyane Johnson"
+
+        console.log(fullname, "is our guest for today.")
+
+        // let - allows you to create variables that can change information
+
+        let address = "Dubai, UAE"
+
+        address = "Sharjah, UAE"
+
+        console.log(`${fullname} will be available at ${address}`)
+
+
+        // functions
+
+        // alert() - creates a browser popup
+
+        alert('Pranav is a good student!')
+
+        // prompt() - creates a browser popup to take information
+
+        const device = prompt(`Which device are you using to attend today's session`)
+
+        alert(`${device} is a good choice!`)
+
+        // console.log() - allows you to print statement in the terminal
+        
+        console.log(`${device} is a good choice!`)
+
+    </script>
+</body>
+
+</html>
